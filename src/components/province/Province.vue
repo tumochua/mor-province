@@ -3,10 +3,7 @@
     <input-select @showHideSelect="showHideSelect"></input-select>
     <check-box-vue v-show="checkBox"></check-box-vue>
     <div v-show="showSelect">
-      <select-option-vue
-        @handleOk="handleOk"
-        @handlCancel="handlCancel"
-      ></select-option-vue>
+      <select-option-vue @handleOk="handleOk"></select-option-vue>
     </div>
   </div>
 </template>
@@ -46,9 +43,6 @@ export default {
     handleOk() {
       this.checkBox = true;
       this.showSelect = false;
-    },
-    handlCancel() {
-      this.checkBox = false;
     },
   },
 };

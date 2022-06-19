@@ -16,6 +16,9 @@ const actions = {
   deleteProvince({ commit }, payload) {
     commit("deleteProvince", payload);
   },
+  handlCancel({ commit }) {
+    commit("handlCancel");
+  },
 };
 
 export default actions;

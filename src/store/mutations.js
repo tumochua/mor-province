@@ -8,10 +8,9 @@ const mutations = {
         return (item.checkbox = false);
       }
     });
-    // if (state.provinces.code === payload) {
-    //   console.log("check mution : ", state.provinces.checkbox === payload);
-    //   state.provinces.checkbox = false;
-    // }
+  },
+  handlCancel(state) {
+    state.provinces.flat(1).map((item) => (item.checkbox = false));
   },
 };
 

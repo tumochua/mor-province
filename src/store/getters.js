@@ -8,6 +8,9 @@ const getters = {
       return province;
     });
   },
+  getBtnCheckBox(state) {
+    return state.provinces.flat(1).filter((item) => item.checkbox);
+  },
 };
 
 export default getters;

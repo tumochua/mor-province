@@ -1,26 +1,19 @@
 <template>
   <div id="app">
-   <h1>hello world</h1>
+    <province-vue></province-vue>
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import ProvinceVue from "./components/province/Province.vue";
 export default {
   name: "App",
-  components: {},
-  computed: {
-    ...mapState({
-      couter: (state) => state.couter,
-    }),
-    ...mapGetters(["getCouter"]),
+  components: {
+    ProvinceVue,
   },
+  computed: {},
 
-  methods: {
-    handeClick() {
-      this.$store.dispatch("increte");
-    },
-  },
+  methods: {},
 };
 </script>
 

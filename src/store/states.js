@@ -1,4 +1,4 @@
 const state = {
-  couter: 10,
+  provinces: [],
 };
 export default state;

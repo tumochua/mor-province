@@ -30,12 +30,9 @@ export default {
 .input-province {
   width: 470px;
   border-radius: 8px;
-  border: 1px solid #3333;
   font-size: 16px;
   padding: 16px 10px;
   border: 1px solid #007bc3;
   outline: none;
-  &:focus {
-  }
 }
 </style>

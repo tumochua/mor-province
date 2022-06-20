@@ -24,7 +24,6 @@ export default {
   },
   methods: {
     handleDelete(code) {
-      console.log("check code :", code);
       this.$store.dispatch("deleteProvince", code);
     },
   },
@@ -34,10 +33,11 @@ export default {
 <style lang="scss" scoped>
 .checked {
   width: 480px;
-  border: 1px solid rgba(153, 153, 153, 1);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 8px;
+
   .checked-select {
     display: block;
     padding: 8px;

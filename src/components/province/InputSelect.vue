@@ -11,6 +11,9 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
+  data() {
+    return {};
+  },
   name: "InputSelect",
   computed: {
     ...mapGetters([""]),
@@ -23,12 +26,16 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .input-province {
-  width: 480px;
+  width: 470px;
   border-radius: 8px;
-  border: 1px solid #007bc3;
+  border: 1px solid #3333;
   font-size: 16px;
   padding: 16px 10px;
+  border: 1px solid #007bc3;
+  outline: none;
+  &:focus {
+  }
 }
 </style>

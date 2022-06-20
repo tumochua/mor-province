@@ -1,6 +1,9 @@
 <template>
   <div>
-    <input-select @showHideSelect="showHideSelect"></input-select>
+    <input-select
+      @showHideSelect="showHideSelect"
+      @handleBlur="handleBlur"
+    ></input-select>
     <check-box-vue v-show="checkBox"></check-box-vue>
     <div v-show="showSelect">
       <select-option-vue @handleOk="handleOk"></select-option-vue>
@@ -38,7 +41,8 @@ export default {
   },
   methods: {
     showHideSelect() {
-      this.showSelect = true;
+      this.showSelect = !this.showSelect;
+      this.checkBox = false;
     },
     handleOk() {
       this.checkBox = true;
@@ -48,4 +52,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss"></style>

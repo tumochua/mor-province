@@ -5,11 +5,12 @@
         <div v-for="apiData in apiDatas" :key="apiData.code">
           <label class="list-checkbox">
             <input
+              class="check-box-input"
               type="checkbox"
               :value="apiData"
               v-model="resultApi"
-              class="check-box-input"
             />
+
             {{ apiData.name }}
           </label>
         </div>
@@ -30,10 +31,12 @@ export default {
     apiDatas: {
       type: Object,
     },
+    modelValue: Array,
   },
   data() {
     return {
       resultApi: [],
+      listApi: [],
     };
   },
   created() {
@@ -44,6 +47,7 @@ export default {
       this.$emit("handleOk");
     },
     toggleCheckBox(value) {
+      console.log("check value", value);
       this.$emit("toggleCheckBox", value);
     },
   },
@@ -52,6 +56,10 @@ export default {
       const list = Array.from(value);
       this.$emit("toggleCheckBox", list);
     },
+    // modelValue: function (value) {
+    //   console.log("check value model ,", value);
+    //   this.listApi = value;
+    // },
   },
 };
 </script>

@@ -2,9 +2,11 @@
   <div id="app">
     <ProvinceVue
       :apiData="multiSelect"
+      :showListApi="showListApi"
       @handleOk="handleOk"
       @handleDelete="handleDelete"
-      :showListApi="showListApi"
+      :listCheck="listCheck"
+      v-model="listCheck"
     />
   </div>
 </template>
@@ -20,6 +22,7 @@ export default {
   data() {
     return {
       multiSelect: [],
+      // listCheck: [],
     };
   },
 
@@ -35,9 +38,18 @@ export default {
   computed: {},
 
   methods: {
-    handleOk() {},
-    toggleCheckBox() {},
-    handleDelete() {},
+    handleOk() {
+      this.toggleCheckBox();
+    },
+    // toggleCheckBox(value) {
+    //   this.listCheck = value;
+    //   console.log("check toggleCheckBox ", this.listCheck);
+    // },
+    // handleDelete(code) {
+    //   this.listCheck = this.listCheck.filter((item) => {
+    //     return item.code !== code;
+    //   });
+    // },
   },
 };
 </script>

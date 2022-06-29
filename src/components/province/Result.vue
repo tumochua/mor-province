@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(item, index) in results" :key="index">
+    <div v-for="(item, index) in listCheck.flat(1)" :key="index">
       <div>
         {{ item.name }}
         <span @click="handleDelete(item.code)">x</span>
@@ -13,7 +13,7 @@
 export default {
   name: "ResultVue",
   props: {
-    results: {
+    listCheck: {
       type: Object,
     },
   },
@@ -22,7 +22,7 @@ export default {
   },
 
   created() {
-    console.log("check result : ", this.results);
+    console.log("check result listChecks : ", this.listCheck);
   },
   methods: {
     handleDelete(data) {

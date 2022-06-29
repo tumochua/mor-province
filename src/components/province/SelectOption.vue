@@ -47,7 +47,7 @@ export default {
       this.$emit("handleOk");
     },
     handlCancel() {
-      this.$store.dispatch("handlCancel");
+      // this.$store.dispatch("handlCancel");
     },
   },
 };

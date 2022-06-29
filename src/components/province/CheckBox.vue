@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     handleDelete(code) {
-      this.$store.dispatch("deleteProvince", code);
+      // this.$store.dispatch("deleteProvince", code);
     },
   },
 };
